@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+.glass-effect {
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-blue-600 to-purple-600;
+}
+
+.hover-scale {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+.dark-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(17, 24, 39, 0.95) 0%,
+    rgba(88, 28, 135, 0.8) 100%
+  );
+}
+
+.logo-glow {
+  filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.3));
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.input-dark {
+  @apply bg-gray-900/50 border-gray-700 text-white placeholder-gray-400;
+}
+
+.dark-nav {
+  background: rgba(17, 24, 39, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
